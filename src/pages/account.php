@@ -21,7 +21,7 @@ session_start();
                 <nav class="menu">
                     <ul>
                         <img src="../assets/images/icon.png" alt="Chicken" class="icon">
-                        <li><a href="../index.php">Home</a></li>
+                        <li><a href="./home.php">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Creator</a></li>
                         <li><a href="#">Characters</a></li>
@@ -45,8 +45,12 @@ session_start();
                         </div>
                     </div>
                     <div class="password">
-                        <input type="button" value="Mudar senha" id="passChange">
-                        <input type="button" value="Cadastrar usuario" id="passChange">
+                        <a href="formPass.php">
+                            <input type="button" value="Mudar senha" id="passChange">
+                        </a>
+                        <a href="formCad.php">
+                            <input type="button" value="Cadastrar usuario" id="passChange">
+                        </a>
                     </div>
                 </div>
                 <div class="account-info">

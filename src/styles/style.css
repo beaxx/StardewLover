@@ -22,6 +22,8 @@
     --transition: all .5s ease-in-out;
 }
 
+/* Menu lateral das páginas */
+
 .menu{
     width: 15%;
     background-color: var(--lighestBrown);
@@ -106,4 +108,104 @@
 
 .exit-button:checked ~ .content-menu.sumir{
     left: -16%;
+}
+
+/* Formulários */
+
+.content{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.border-form {
+    position: absolute;
+    width: 320px;  
+    height: 220px;
+    background-color: var(--orangeBrown);
+    border: 2px solid var(--darkBrown);
+    z-index: 0; 
+}
+
+.form{
+    background-color: var(--lightBrown); 
+    border: 2px solid var(--darkBrown);
+    box-shadow: inset -4px 4px 0px 0px var(--shadowBrown);
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    padding: 20px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.info-user{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    font-family: 'stardewText';
+}
+
+.info-user span{
+    color: var(--darkBrown);
+    font-size: larger;
+}
+
+.form label{
+    color: var(--darkBrown);
+    font-size: large;
+}   
+
+form{
+    width: 100%;
+}
+
+.form .user, .form .pass, .form .username, .form .type{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 80%;
+}
+
+.form #user, .form #pass, .form #username, .form #type{
+    background-color: transparent;
+    outline: none;
+    height: 25px;
+    border: var(--darkBrown) 2px solid;
+    box-shadow: -2px 2px 0px  var(--shadowBrown);
+    font-family: 'stardewText'; 
+    padding-left: 4px;
+}
+
+.form .buttons{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 80%;
+}
+
+.form .buttons #reset, .form .buttons #submit{
+    background-color: var(--lighestBrown);
+    font-family: 'stardewText';
+    font-weight: 500;
+    padding: 2px;
+    border: var(--darkBrown) 2px solid;
+    height: 25px;
+    font-size: large;
+    outline: none;
+}
+
+.form .buttons #submit{
+    color: var(--green);
+}
+
+.form .buttons #reset{
+    color: var(--red);
 }

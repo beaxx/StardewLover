@@ -26,6 +26,7 @@
             $_SESSION['name'] = $line['name'];
             $_SESSION['status'] = $line['status'];
             $_SESSION['type'] = $line['type'];
+            $_SESSION['password'] = $line['password'];
             header("Location: ../pages/home.php");
         } else {
             echo "ERROR!<br>";

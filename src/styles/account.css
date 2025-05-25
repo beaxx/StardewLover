@@ -48,6 +48,13 @@ body{
     align-items: center;
     text-align: center; 
 }
+.form{
+    height: 250px;
+}
+
+.border-form{
+    height: 270px;
+}
 
 .you-info .profile{
     margin: 0;
