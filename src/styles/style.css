@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'stardewText';
+    src: url("../assets/fonts/StardewValley.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --white: #fff;
+    --beige: #FDCCA4;
+    --lighestBrown: #FED891;
+    --lightBrown: #FDC878;
+    --darkBrown: #642722;
+    --orangeBrown:#EF8D13;
+    --shadowBrown: #C9945F;
+    --green: #126D0E;
+    --red: #B52121;
+    --transition: all .5s ease-in-out;
+}
+
+.menu{
+    width: 15%;
+    background-color: var(--lighestBrown);
+    border-right: 2px solid var(--darkBrown);
+    box-shadow: inset -4px 4px 0px 0px var(--shadowBrown);
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 998;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu ul a{
+    text-decoration: none;
+    color: var(--darkBrown);
+    font-family: 'stardewText';
+    font-size: larger;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.menu ul a:hover{
+    color: var(--orangeBrown);
+    transform: scale(1.1);
+}
+
+.menu ul .icon{
+    width: 3rem;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.border-menu{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 16%;
+    z-index: 997;
+    background-color: var(--orangeBrown);
+    border-right: 2px solid var(--darkBrown);
+}
+
+.exit-button{
+    position:fixed;
+    z-index: 999;
+    top: 20px;
+    left: 20px;
+    width: 2rem;
+    cursor: pointer;
+    height: 2rem;
+    opacity: 0;
+}
+
+.exit{
+    position:fixed;
+    top: 20px;
+    left: 20px;
+    width: 2rem;
+    height: 2rem;
+    z-index: 999;
+    object-fit: contain;
+    border: 2px solid var(--darkBrown);
+}
+
+.content-menu{
+    position: absolute;
+    left: 0;
+    transition: var(--transition);
+}
+
+.exit-button:checked ~ .content-menu.sumir{
+    left: -16%;
+}

@@ -1,0 +1,115 @@
+body{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../assets/images/background.jpg);
+    background-size: cover;
+}
+
+.border-account{
+    background-color: var(--orangeBrown);
+    display: flex;
+    height: 84vh;
+    width: 80%;
+    border: 2px solid var(--darkBrown);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.account{
+    background-color: var(--beige);
+    display: flex;
+    height: 80vh;
+    width: 98%;
+    border: 2px solid var(--darkBrown);
+}
+
+.you-info{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-top: 20px;
+    border-right:  4px solid var(--shadowBrown);
+}
+
+.border-img{
+    background-color: var(--orangeBrown);
+    border: 2px solid var(--darkBrown);
+    width: 13rem;
+    height: 13rem;
+    margin: 0;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+.you-info .profile{
+    margin: 0;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;    
+}
+
+.you-info .profile img{
+    border: 2px solid var(--darkBrown);
+    width: 12rem;
+}
+
+.you-info .name{
+    font-family: 'stardewText';
+    font-size: 2rem;
+    color: var(--darkBrown);
+    margin: 0;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.you-info .name span{
+    position: absolute;
+}
+
+.account-info{
+    flex: 2;
+}
+
+.password{
+    border-top:  4px solid var(--shadowBrown);
+    display: flex;
+    flex: 1 ;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#passChange{
+    background-color: var(--lighestBrown);
+    color: var(--darkBrown);
+    font-family: 'stardewText';
+    font-weight: 500;
+    padding: 5px;
+    border: var(--darkBrown) 2px solid;
+    box-shadow: inset -3px 3px 0px 0px var(--shadowBrown);
+    font-size: large;
+    outline: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#passChange:hover{
+    transform: scale(1.1);
+}
+
+.you{
+    flex: 2;
+}
