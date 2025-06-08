@@ -21,7 +21,7 @@ session_start();
             <nav class="menu">
                 <ul>
                     <img src="../assets/images/icon.png" alt="Chicken" class="icon">
-                    <li><a href="./home.php">Home</a></li>
+                    <li><a href="./account.php">Account</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Creator</a></li>
                     <li><a href="#">Characters</a></li>

@@ -24,3 +24,4 @@ if($_SESSION['password'] == $oldPass){
     echo "Old password incorrect.<br> Please go back and try again.";
     exit();
 }
+mysqli_close($mysqli);

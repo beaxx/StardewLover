@@ -17,7 +17,7 @@
                     <form action="backend/processLogin.php" method="post">
                         <div class="info-user">
                             <div class="user">
-                                <label for="username">Name</label>
+                                <label for="username">Username</label>
                                 <input type="text" name="username" id="user" required>
                             </div>
                             <div class="pass">
@@ -26,8 +26,8 @@
                             </div>
                         </div>
                         <div class="buttons">
-                            <input type="reset" value="Limpar" id="reset">
-                            <input type="submit" value="Entrar" id="submit">
+                            <input type="reset" value="Reset" id="reset">
+                            <input type="submit" value="Enter" id="submit">
                         </div>
                     </form>
                 </div>

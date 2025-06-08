@@ -44,21 +44,17 @@ session_start();
                             <label for="username">Username</label>
                             <input type="text" name="username" id="username" required>
                         </div>
-                        <div class="pass">
-                            <label for="pass">Password</label>
-                            <input type="password" name="pass" id="pass" required>
-                        </div>
                         <div class="type">
                             <label for="type">Type</label>
                             <select name="type" id="type">
-                                <option value="0" name="type">User</option>
-                                <option value="1"  name="type">Admin</option>
+                                <option value="1" name="type">User</option>
+                                <option value="0"  name="type">Admin</option>
                             </select>
                         </div>
                     </div>
                     <div class="buttons">
-                        <input type="reset" value="Limpar" id="reset">
-                        <input type="submit" value="Entrar" id="submit">
+                        <input type="reset" value="Reset" id="reset">
+                        <input type="submit" value="Register" id="submit">
                     </div>
                 </form>
             </div>

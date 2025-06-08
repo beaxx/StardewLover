@@ -200,6 +200,7 @@ form{
     height: 25px;
     font-size: large;
     outline: none;
+    cursor: pointer;
 }
 
 .form .buttons #submit{

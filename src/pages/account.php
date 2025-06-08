@@ -3,6 +3,8 @@ include '../backend/connection.php';
 session_start();
 ?>
 
+<!-- se for adm dar a opção de criar user e ver user, se não, não. -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,16 +47,50 @@ session_start();
                         </div>
                     </div>
                     <div class="password">
-                        <a href="formPass.php">
-                            <input type="button" value="Mudar senha" id="passChange">
-                        </a>
                         <a href="formCad.php">
-                            <input type="button" value="Cadastrar usuario" id="passChange">
+                            <input type="button" value="Register users" id="passChange">
+                        </a>
+                        <a href="../pages/dashboard.php">
+                            <input type="button" value="View users" id="passChange">
                         </a>
                     </div>
                 </div>
                 <div class="account-info">
-
+                    <div class="content-info">
+                        <div class="infos">
+                            <span class="info"><b>Name:</b> <?php echo $_SESSION['name']; ?></span>
+                            <span class="info"><b>Username:</b> <?php echo $_SESSION['username']; ?></span>
+                        </div>
+                        <div class="infos">
+                            <span class="info"><b>Status:</b> 
+                                <?php 
+                                    if($_SESSION['status'] == 0) {
+                                        echo "Inativo";
+                                    } else if($_SESSION['status'] == 1){
+                                        echo "Ativo";
+                                    }else{
+                                        echo "Bloqueado";
+                                    }
+                                ?>
+                            </span>
+                            <span><b>Amount of acess:</b> <?php echo $_SESSION['access']; ?></span>
+                            <span><b>Type:</b>
+                               <?php 
+                                    if($_SESSION['type'] == 0) {
+                                        echo "Admin";
+                                    } else{
+                                        echo "User";
+                                    }
+                                ?>
+                            </span>
+                        </div>
+                    </div>      
+                    <a href="formPass.php">
+                        <input type="button" value="Change password" id="passChange">
+                    </a>
+                    <a href="../backend/logOut.php">
+                        <input type="button" value="Log out" id="passChange">
+                    </a>
                 </div>
             </div>
         </div>

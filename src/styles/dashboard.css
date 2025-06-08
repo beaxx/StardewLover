@@ -1,0 +1,45 @@
+body{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../assets/images/background.jpg);
+    background-size: cover;
+}
+
+.table-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 15px; 
+    width: 60%;
+}
+
+.border-form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--orangeBrown);
+    border: 2px solid var(--darkBrown);
+    border-radius: 8px;
+    z-index: 0;
+}
+
+.table {
+    position: relative;
+    z-index: 1;
+    width: 100% !important;
+    border: 2px solid var(--darkBrown) !important;
+    margin-bottom: 0 !important;
+}
+
+.table>:not(caption)>*>* {
+    background-color: var(--lightBrown) !important; 
+}
+.table th, .table td {
+    color: var(--darkBrown) !important; 
+}

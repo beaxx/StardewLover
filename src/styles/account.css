@@ -120,3 +120,21 @@ body{
 .you{
     flex: 2;
 }
+
+.content-info{
+    padding: 20px 60px 20px 60px;
+    border-bottom:  4px solid var(--shadowBrown);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+    color: var(--darkBrown);
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    gap: 20px;
+    font-size: large;
+}
+
+.infos{
+    display: flex;
+    width: 100%;
+    gap: 30px;
+}

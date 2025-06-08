@@ -13,7 +13,7 @@
 
         include 'connection.php';
         session_start();
-
+        
         $username = $_POST['username'];
         $password = $_POST['pass'];
 
@@ -22,12 +22,25 @@
         $line = mysqli_fetch_array($result);
 
         if ($line) {
+
+            $updateAccess = "UPDATE users SET acess = acess + 1 WHERE username = '$username'";
+            mysqli_query($mysqli, $updateAccess);
+            // Fazer verificação se o usuário está bloqueado
+            // Bloquear aceeso se o usuário digitar a senha errada por 3x consecutivas
             $_SESSION['username'] = $line['username'];
             $_SESSION['name'] = $line['name'];
             $_SESSION['status'] = $line['status'];
             $_SESSION['type'] = $line['type'];
             $_SESSION['password'] = $line['password'];
-            header("Location: ../pages/home.php");
+            $_SESSION['access'] = $line['acess'] + 1;
+
+            if($_SESSION['access'] == 1){
+                header("Location: ../pages/formPass.php");
+            }else{
+                header("Location: ../pages/home.php");
+            }
+            // criar uma variavel de que, se for o primeiro acesso do usuário, manda-lo para tela de alterar a senha.
+            //mostrar na tela de usuário quantos acessos tiveram na conta dele.
         } else {
             echo "ERROR!<br>";
             echo "Username or password incorrect.<br> Please go back and try again.";
