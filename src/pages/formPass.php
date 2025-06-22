@@ -11,21 +11,21 @@ session_start();
     <link rel="icon" href="../assets/images/icon.png" type="image/png">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/account.css">
+    <link rel="stylesheet" href="../styles/media-query.css">
     <title>Change password</title>
 </head>
 <body>
     <img src="../assets/images/exit.png" alt="letter X" class="exit">
     <input type="checkbox" class="exit-button">
-    <div class="content-menu sumir">
+    <div class="content-menu disappear">
         <div class="border-menu">
             <nav class="menu">
                 <ul>
                     <img src="../assets/images/icon.png" alt="Chicken" class="icon">
                     <li><a href="./account.php">Account</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Creator</a></li>
-                    <li><a href="#">Characters</a></li>
-                    <li><a href="#">Food</a></li>
+                    <li><a href="./home.php#about">About</a></li>
+                    <li><a href="./home.php#creator">Creator</a></li>
+                    <li><a href="./home.php#characters">Characters</a></li>
                 </ul>
             </nav>
         </div>
@@ -49,7 +49,7 @@ session_start();
                             <input type="password" name="confirmPass" id="pass" required>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttonsCad">
                         <input type="reset" value="Limpar" id="reset">
                         <input type="submit" value="Entrar" id="submit">
                     </div>

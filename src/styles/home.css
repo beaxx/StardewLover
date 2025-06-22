@@ -1,0 +1,302 @@
+.container-image {
+  position: relative;
+  height: 100vh;
+}
+
+.container-image .text{
+    z-index: 3;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.container-image h1{
+    font-family: "stardewText";
+    font-size: 4rem;
+    color: var(--white);
+}
+
+.container-image p{
+    color: var(--darker);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.container-image p a{
+    color: var(--darker);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.img-back {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.img-front {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../assets/images/tentativa2.png');
+  background-repeat: no-repeat;
+  background-size: cover;       
+  background-position-x: 0;
+  z-index: 2;
+  pointer-events: none;
+  transition: background-repeat 0.3s ease;
+}
+
+.bird-front{
+  width: 100px;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 10vh;
+  animation: flying 10s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes flying {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-100vw);
+  }
+  
+}
+
+.about{
+  background-color: var(--yellow);
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 4rem;
+}
+
+.about .left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.about .right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
+
+.about .right h1{
+  font-family: "stardewText";
+  font-size: 4rem;
+  color: var(--darkBrown);
+  margin-bottom: 1rem;
+}
+
+.about .right p {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  text-align: justify;
+  text-indent: 1rem;
+  color: var(--darker);
+  font-size: large;
+  margin-bottom: 1rem;
+}
+
+
+.creator {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 4rem;
+  height: 100vh;
+}
+
+.creator .right, .creator .left{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.creator .left h1{
+  font-family: "stardewText";
+  font-size: 4rem;
+  color: var(--darkBrown);
+  margin-bottom: 1rem;
+}
+
+.creator .left p {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  text-align: justify;
+  padding-right: 4rem;
+  text-indent: 2rem;
+  font-size: large;
+  margin-bottom: 1rem;
+  color: var(--darker);
+}
+
+.creator .left a{
+  color: var(--darkBrown);
+}
+
+.creator .right{
+  justify-content: center;
+}
+
+.creator .right .creator-image{
+  width: 100%;
+  height: 100%;
+}
+
+.creator .right img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0.5rem solid var(--darkBrown);
+}
+
+.characters {
+  height: 100vh;
+  background-color: var(--beige);
+}
+
+.characters h1{
+  font-family: "stardewText";
+  font-size: 4rem;
+  color: var(--darkBrown);
+  text-align: center;
+}
+
+.characters-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
+
+
+
+#carouselExampleControls {
+  width: 100% !important;
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.card-border{
+    background-color: var(--orangeBrown);
+    border: 2px solid var(--darkBrown);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    z-index: 0; 
+}
+
+.card{
+  background-color: var(--lighestBrown) !important;
+  border: 2px solid var(--darkBrown) !important;
+  box-shadow: inset -4px 4px 0px 0px var(--shadowBrown) !important;
+  border-radius: 0 !important;
+}
+
+.card-body{
+  text-align: center;
+}
+
+.card-body .btn{
+    background-color: var(--lighestBrown);
+    color: var(--darkBrown);
+    font-family: 'stardewText';
+    font-weight: 500;
+    padding: 5px;
+    border: var(--darkBrown) 2px solid;
+    box-shadow: inset -3px 3px 0px 0px var(--shadowBrown);
+    font-size: large;
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: none !important;
+}
+
+.card-body .btn:hover{
+  transform: scale(1.1);
+  background-color: var(--lighestBrown) !important;
+  color: var(--darkBrown) !important;
+  border: 2px solid var(--darkBrown) !important;
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 100%;
+} 
+.card {
+  margin: 0 0.5em;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
+  border-radius: 0;
+}
+.carousel-inner {
+  padding: 1em;
+}
+
+
+svg{
+  width: 40px;
+  height: 40px;
+  color: var(--orangeBrown);
+}
+
+.card-img-top{
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.card-img-top img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer{
+  background-color: var(--darkBrown);
+  color: var(--white);
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.footer a{
+  text-decoration: none;
+  color: var(--orangeBrown);
+  font-size: larger;
+  transition: var(--transition);
+}
+
+.icons-game{
+  display:flex;
+  gap: 1rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.icons-game a:hover{
+  transform: scale(1.1)
+}

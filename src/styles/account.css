@@ -8,23 +8,22 @@ body{
     background-size: cover;
 }
 
-.border-account{
+.border-account {
     background-color: var(--orangeBrown);
     display: flex;
-    height: 84vh;
-    width: 80%;
+    height: 74vh;           /* ↓ antes era 84vh */
+    width: 100%;             /* ↓ antes era 80% */
     border: 2px solid var(--darkBrown);
-    display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
 }
 
-.account{
+.account {
     background-color: var(--beige);
     display: flex;
-    height: 80vh;
-    width: 98%;
+    height: 70vh;           /* ↓ antes era 80vh */
+    width: 97%;             /* ↓ antes era 98% */
     border: 2px solid var(--darkBrown);
 }
 
@@ -122,9 +121,10 @@ body{
 }
 
 .content-info{
-    padding: 20px 60px 20px 60px;
+    padding: 40px 40px 37.5px 40px;
+    height: 81%;
     border-bottom:  4px solid var(--shadowBrown);
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     color: var(--darkBrown);
     display: flex;
     text-align: left;
@@ -138,3 +138,12 @@ body{
     width: 100%;
     gap: 30px;
 }
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px;
+}
+

@@ -6,6 +6,7 @@ body{
     height: 100vh;
     background-image: url(../assets/images/background.jpg);
     background-size: cover;
+    padding: 40px;
 }
 
 .table-wrapper {
@@ -15,7 +16,7 @@ body{
     width: 60%;
 }
 
-.border-form {
+.border-form.table {
     position: absolute;
     top: 0;
     left: 0;
@@ -25,7 +26,6 @@ body{
     height: 100%;
     background-color: var(--orangeBrown);
     border: 2px solid var(--darkBrown);
-    border-radius: 8px;
     z-index: 0;
 }
 
@@ -42,4 +42,8 @@ body{
 }
 .table th, .table td {
     color: var(--darkBrown) !important; 
+}
+
+.table a{
+    color: var(--darkBrown);
 }

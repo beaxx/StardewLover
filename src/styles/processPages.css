@@ -5,3 +5,16 @@ body{
     justify-content: center;
     height: 100vh;
 }
+
+.error{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h2{
+    font-size: 2rem;
+    padding: 5px;
+}

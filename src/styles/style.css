@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @font-face {
     font-family: 'stardewText';
     src: url("../assets/fonts/StardewValley.ttf");
@@ -7,6 +9,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root{
@@ -16,9 +19,11 @@
     --lightBrown: #FDC878;
     --darkBrown: #642722;
     --orangeBrown:#EF8D13;
+    --yellow: #FFB704;
     --shadowBrown: #C9945F;
     --green: #126D0E;
     --red: #B52121;
+    --darker: #150604;
     --transition: all .5s ease-in-out;
 }
 
@@ -106,8 +111,8 @@
     transition: var(--transition);
 }
 
-.exit-button:checked ~ .content-menu.sumir{
-    left: -16%;
+.exit-button:checked ~ .content-menu.disappear{
+    left: -100%;
 }
 
 /* Formulários */
@@ -167,14 +172,14 @@ form{
     width: 100%;
 }
 
-.form .user, .form .pass, .form .username, .form .type{
+.form .user, .form .pass, .form .username, .form .type, .form .status{
     display: flex;
     justify-content: space-between;
     margin: auto;
     width: 80%;
 }
 
-.form #user, .form #pass, .form #username, .form #type{
+.form #user, .form #pass, .form #username, .form #type, .form #status{
     background-color: transparent;
     outline: none;
     height: 25px;
@@ -184,14 +189,14 @@ form{
     padding-left: 4px;
 }
 
-.form .buttons{
+.form .buttonsCad{
     display: flex;
     justify-content: space-between;
     margin: auto;
     width: 80%;
 }
 
-.form .buttons #reset, .form .buttons #submit{
+.form .buttonsCad #reset, .form .buttonsCad #submit{
     background-color: var(--lighestBrown);
     font-family: 'stardewText';
     font-weight: 500;
@@ -203,10 +208,18 @@ form{
     cursor: pointer;
 }
 
-.form .buttons #submit{
+.form .buttonsCad #submit{
     color: var(--green);
 }
 
-.form .buttons #reset{
+.form .buttonsCad #reset{
     color: var(--red);
+}
+
+.buttonsCad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px;
 }

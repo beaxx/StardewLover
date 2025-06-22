@@ -1,6 +1,24 @@
 <?php
 include '../backend/connection.php';
 session_start();
+
+if (isset($_GET['username'])) {
+    $username = $_GET['username'];
+    $sql = "SELECT username, name, status, type FROM users WHERE username = '$username'";
+    $result = $mysqli->query($sql);
+
+    if($result->num_rows > 0) {
+        $line = $result->fetch_assoc();
+        $name = $line['name'];
+        $status = $line['status'];
+        $type = $line['type'];
+
+    } else {
+        echo "Usuário não encontrado!";
+        exit();
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +30,7 @@ session_start();
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/account.css">
     <link rel="stylesheet" href="../styles/media-query.css">
-    <title>Create user</title>
+    <title>Change user information</title>
 </head>
 <body>
     <img src="../assets/images/exit.png" alt="letter X" class="exit">
@@ -33,16 +51,20 @@ session_start();
     <div class="content">
         <div class="border-form"></div>
             <div class="form">
-                <form action="../backend/cadUser.php" method="post">
+                <form action="../backend/changeUser.php" method="post">
                     <div class="info-user">
                     <span>User registration</span>
-                        <div class="user">
-                            <label for="username">Name</label>
-                            <input type="text" name="name" id="user" required>
-                        </div>
                         <div class="username">
                             <label for="username">Username</label>
-                            <input type="text" name="username" id="username" required>
+                            <input type="text" name="username" id="username" value="<?php echo $line['username']?>" readonly>
+                        </div>
+                        <div class="user">
+                            <label for="username">Name</label>
+                            <input type="text" name="name" id="user" value="<?php echo $line['name']?>">
+                        </div>
+                        <div class="status">
+                            <label for="status">Status</label>
+                            <input type="text" name="status" id="status" value="<?php echo $line['status']?>">
                         </div>
                         <div class="type">
                             <label for="type">Type</label>

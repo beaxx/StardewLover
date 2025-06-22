@@ -1,5 +1,5 @@
-CREATE DATABASE stardewLover;
-USE stardewLover;
+CREATE DATABASE LittleFarm;
+USE LittleFarm;
 
 CREATE TABLE users(
     username VARCHAR(30) PRIMARY KEY NOT NULL,
@@ -9,6 +9,8 @@ CREATE TABLE users(
     status CHAR(1) NOT NULL,
     acess int not null
 );
+
+ALTER TABLE users ADD failed_attempts INT DEFAULT 0; -- adicionado p ajudara bloquear após três vezes consecutivas
 
 -- Em type, se o usuário é um administrador, será 0 e se for apenas um usuário comum, será 1.
 

@@ -6,6 +6,7 @@
     <link rel="icon" href="assets/images/icon.png" type="image/png">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/media-query.css">
     <title>Login</title>
 </head>
 <body>
@@ -25,7 +26,7 @@
                                 <input type="password" name="pass" id="pass" required>
                             </div>
                         </div>
-                        <div class="buttons">
+                        <div class="buttonsCad">
                             <input type="reset" value="Reset" id="reset">
                             <input type="submit" value="Enter" id="submit">
                         </div>

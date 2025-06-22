@@ -13,84 +13,93 @@ session_start();
     <link rel="icon" href="../assets/images/icon.png" type="image/png">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/account.css">
+    <link rel="stylesheet" href="../styles/media-query.css">
     <title>Account</title>
 </head>
     <body>
         <img src="../assets/images/exit.png" alt="letter X" class="exit">
         <input type="checkbox" class="exit-button">
-        <div class="content-menu sumir">
+        <div class="content-menu disappear">
             <div class="border-menu">
                 <nav class="menu">
                     <ul>
                         <img src="../assets/images/icon.png" alt="Chicken" class="icon">
                         <li><a href="./home.php">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Creator</a></li>
-                        <li><a href="#">Characters</a></li>
-                        <li><a href="#">Food</a></li>
+                        <li><a href="./home.php#about">About</a></li>
+                        <li><a href="./home.php#creator">Creator</a></li>
+                        <li><a href="./home.php#characters">Characters</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
-        <div class="border-account">
-            <div class="account">
-                <div class="you-info">
-                    <div class="you">
-                        <div class="profile">
-                            <div class="border-img">
-                                <img src="../assets/images/profile.png" alt="profile">
+        <div class="body">
+            <div class="border-account">
+                <div class="account">
+                    <div class="you-info">
+                        <div class="you">
+                            <div class="profile">
+                                <div class="border-img">
+                                    <img src="../assets/images/profile.png" alt="profile">
+                                </div>
+                            </div>
+                            <div class="name">
+                                <span><?php echo $_SESSION['name']?></span>
+                                <img src="../assets/images/titleMenu.png" alt="title">
                             </div>
                         </div>
-                        <div class="name">
-                            <span><?php echo $_SESSION['name']?></span>
-                            <img src="../assets/images/titleMenu.png" alt="title">
+                    <div class="password">
+                            <?php
+                                if ($_SESSION['type'] == 0) {
+                                    echo '<a href="formCad.php">
+                                        <button id="passChange">Register users</button>
+                                    </a>';
+                                    echo '<a href="../pages/dashboard.php">
+                                        <button id="passChange">View users</button>
+                                    </a>';
+                                }else{
+                                    echo '<a href="../backend/deleteAccount.php">
+                                        <button id="passChange">Delete Account</button>
+                                    </a>';
+                                }
+                            ?>
                         </div>
                     </div>
-                    <div class="password">
-                        <a href="formCad.php">
-                            <input type="button" value="Register users" id="passChange">
-                        </a>
-                        <a href="../pages/dashboard.php">
-                            <input type="button" value="View users" id="passChange">
-                        </a>
-                    </div>
-                </div>
-                <div class="account-info">
-                    <div class="content-info">
-                        <div class="infos">
+                    <div class="account-info">
+                        <div class="content-info">
                             <span class="info"><b>Name:</b> <?php echo $_SESSION['name']; ?></span>
                             <span class="info"><b>Username:</b> <?php echo $_SESSION['username']; ?></span>
-                        </div>
-                        <div class="infos">
-                            <span class="info"><b>Status:</b> 
-                                <?php 
-                                    if($_SESSION['status'] == 0) {
-                                        echo "Inativo";
-                                    } else if($_SESSION['status'] == 1){
-                                        echo "Ativo";
-                                    }else{
-                                        echo "Bloqueado";
-                                    }
-                                ?>
-                            </span>
-                            <span><b>Amount of acess:</b> <?php echo $_SESSION['access']; ?></span>
-                            <span><b>Type:</b>
-                               <?php 
-                                    if($_SESSION['type'] == 0) {
-                                        echo "Admin";
-                                    } else{
-                                        echo "User";
-                                    }
-                                ?>
-                            </span>
-                        </div>
-                    </div>      
-                    <a href="formPass.php">
-                        <input type="button" value="Change password" id="passChange">
-                    </a>
-                    <a href="../backend/logOut.php">
-                        <input type="button" value="Log out" id="passChange">
-                    </a>
+                                <span class="info"><b>Status:</b> 
+                                    <?php 
+                                        if($_SESSION['status'] == 0) {
+                                            echo "Inativo";
+                                        } else if($_SESSION['status'] == 1){
+                                            echo "Ativo";
+                                        }else{
+                                            echo "Bloqueado";
+                                        }
+                                    ?>
+                                </span>
+                                <span><b>Amount of acess:</b> <?php echo $_SESSION['access']; ?></span>
+                                <span><b>Type:</b>
+                                <?php
+                                        if($_SESSION['type'] == 0) {
+                                            echo "Admin";
+                                        } else{
+                                            echo "User";
+                                        }
+                                    ?>
+                                </span>
+                        </div>      
+                        <div class="buttons">
+                                <a href="formPass.php">
+                                    <button id="passChange">Change password</button>
+                                </a>
+                                <a href="../backend/logOut.php">
+                                    <button id="passChange">Log out</button>
+                                </a>
+                                </div>
+
+                    </div>
                 </div>
             </div>
         </div>

@@ -4,7 +4,7 @@ include 'connection.php';
 session_start();
 
 $username = $_POST['username'];
-$password = $username . "123"; // senha padrão criada
+$password = password_hash($username . "123", PASSWORD_DEFAULT); // senha padrão criada
 $name = $_POST['name'];
 $type = $_POST['type'];
 $status = "1";      
