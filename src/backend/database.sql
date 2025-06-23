@@ -1,5 +1,5 @@
-CREATE DATABASE LittleFarm;
-USE LittleFarm;
+CREATE DATABASE littleFarm;
+USE littleFarm;
 
 CREATE TABLE users(
     username VARCHAR(30) PRIMARY KEY NOT NULL,
@@ -15,3 +15,5 @@ ALTER TABLE users ADD failed_attempts INT DEFAULT 0; -- adicionado p ajudara blo
 -- Em type, se o usuário é um administrador, será 0 e se for apenas um usuário comum, será 1.
 
 -- Em status, se o usuário estiver inativo será 0, ativo será 1 e bloqueado 2.
+
+-- Todas as senhas do banco que já tiveram o primeiro acesso, são '1234'.

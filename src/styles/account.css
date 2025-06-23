@@ -12,7 +12,9 @@ body{
     background-color: var(--orangeBrown);
     display: flex;
     height: 74vh;           /* ↓ antes era 84vh */
-    width: 100%;             /* ↓ antes era 80% */
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
     border: 2px solid var(--darkBrown);
     justify-content: center;
     text-align: center;
@@ -23,7 +25,7 @@ body{
     background-color: var(--beige);
     display: flex;
     height: 70vh;           /* ↓ antes era 80vh */
-    width: 97%;             /* ↓ antes era 98% */
+    width: 100%;             /* ↓ antes era 98% */
     border: 2px solid var(--darkBrown);
 }
 

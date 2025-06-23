@@ -251,10 +251,17 @@
 }
 
 
-svg{
+
+.characters i{
   width: 40px;
   height: 40px;
-  color: var(--orangeBrown);
+  color: var(--darkBrown);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--lighestBrown);
+  border: var(--darkBrown) 2px solid;
+  box-shadow: inset -3px 3px 0px 0px var(--shadowBrown);
 }
 
 .card-img-top{

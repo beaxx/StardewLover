@@ -3,7 +3,7 @@
 $host = 'localhost';
 $user = 'root';
 $pass = '';
-$database = 'stardewLover';
+$database = 'littlefarm';
 
 
 $mysqli = new mysqli($host, $user, $pass, $database);

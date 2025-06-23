@@ -17,7 +17,8 @@ $result = mysqli_query($mysqli, $sql);
     <link rel="stylesheet" href="../styles/media-query.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <title>Usuários</title>
+    <script src="https://kit.fontawesome.com/b6c7ae2a7c.js" crossorigin="anonymous"></script>
+    <title>Users</title>
 </head>
 <body>
     <img src="../assets/images/exit.png" alt="letter X" class="exit">
@@ -75,7 +76,7 @@ $result = mysqli_query($mysqli, $sql);
                             }
                             echo "</td>";
                             echo "<td>";
-                                echo "<a href=\"../pages/formUser.php?username=" .$line["username"]. "\"><i class=\"bi bi-pencil-square\"></i></a>";
+                                echo "<a href=\"../pages/formUser.php?username=" .$line["username"]. "\"><i class=\"fa-solid fa-pen-to-square\"></i></a>";
                             echo "</td>";
                             echo "</tr>";
                         }
