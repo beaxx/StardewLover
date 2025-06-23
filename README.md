@@ -7,7 +7,20 @@ Este site foi criado com o propósito de aplicar e aprofundar conhecimentos bás
 
 ### 🔧 Tecnologias Utilizadas 
 
+[![My Skills](https://skillicons.dev/icons?i=html,css,php,js,mysql,github)](https://skillicons.dev)
+* **Photopea** e **xampp** também foram utilizados durante o processo de criação.
+
 ### 🤝 Habilidades Desenvolvidas
+
+#### Hard Skill (saber tecnológico)
+- PHP
+- Criprografia de dados
+- MySQL
+
+#### Soft Skill (saber comportamental)
+- Autonomia
+- Criatividade
+- Boas práticas
 
 ### 📄 Atribuição de Créditos
 
@@ -21,7 +34,7 @@ Este site foi feito apenas para fins educacionais e sem fins lucrativos.
 ___
 
 > [!WARNING]
-> Todas imagens foram retiradas de seu site, e podem ser encontradas <a href="https://stardewvalleywiki.com/Stardew_Valley_Wiki">aqui</a>
+> Todas imagens foram retiradas do site "Stardew Valley Wiki", e podem ser encontradas <a href="https://stardewvalleywiki.com/Stardew_Valley_Wiki">aqui</a>
 
 <br>
 
